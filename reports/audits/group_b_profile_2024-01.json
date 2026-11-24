@@ -1,0 +1,118 @@
+{
+  "analysis_eligible_rows": 3728673,
+  "borough_counts": {
+    "Bronx": 183937,
+    "Brooklyn": 890364,
+    "EWR": 1,
+    "Manhattan": 1851450,
+    "N/A": 63,
+    "Queens": 752111,
+    "Staten Island": 50747
+  },
+  "candidate_exclusion_counts_independent": {
+    "positive_tip_rows": 3728929,
+    "rows_outside_expected_month": 0,
+    "rows_with_any_required_missing": 0,
+    "rows_with_invalid_pickup_location": 0,
+    "rows_with_nonfinite_numeric": 0,
+    "rows_with_nonpositive_fare": 42,
+    "rows_with_nonpositive_miles": 214,
+    "rows_with_unsupported_platform": 0
+  },
+  "eligible_rows_before_zone_join": 3728673,
+  "hour_counts": {
+    "0": 115809,
+    "1": 77504,
+    "10": 172550,
+    "11": 173586,
+    "12": 178459,
+    "13": 179498,
+    "14": 188214,
+    "15": 190920,
+    "16": 200784,
+    "17": 233286,
+    "18": 247965,
+    "19": 223465,
+    "2": 54862,
+    "20": 200859,
+    "21": 195177,
+    "22": 183574,
+    "23": 152436,
+    "3": 42342,
+    "4": 47733,
+    "5": 61510,
+    "6": 93270,
+    "7": 147580,
+    "8": 186130,
+    "9": 181160
+  },
+  "platform_counts": {
+    "Lyft": 1060818,
+    "Uber": 2667855
+  },
+  "quantiles": {
+    "base_passenger_fare": {
+      "0.0": 0.43,
+      "0.01": 7.19,
+      "0.05": 8.28,
+      "0.25": 12.76,
+      "0.5": 20.74,
+      "0.75": 34.23,
+      "0.95": 71.81,
+      "0.99": 125.88,
+      "0.999": 222.6931200000085,
+      "1.0": 907.59
+    },
+    "tip_rate": {
+      "0.0": 1.7531249452148457e-05,
+      "0.01": 0.05376344086021505,
+      "0.05": 0.07974481658692185,
+      "0.25": 0.12961762799740764,
+      "0.5": 0.20101522842639594,
+      "0.75": 0.2530054644808743,
+      "0.95": 0.40096230954290296,
+      "0.99": 0.6092091688960514,
+      "0.999": 1.195457262402869,
+      "1.0": 11.11111111111111
+    },
+    "tips": {
+      "0.0": 0.01,
+      "0.01": 1.0,
+      "0.05": 1.0,
+      "0.25": 3.0,
+      "0.5": 4.19,
+      "0.75": 6.58,
+      "0.95": 15.0,
+      "0.99": 25.75,
+      "0.999": 47.97,
+      "1.0": 196.8
+    },
+    "trip_miles": {
+      "0.0": 0.007,
+      "0.01": 0.49,
+      "0.05": 0.78,
+      "0.25": 1.574,
+      "0.5": 3.101,
+      "0.75": 7.14,
+      "0.95": 17.97,
+      "0.99": 30.74,
+      "0.999": 58.17,
+      "1.0": 285.12
+    }
+  },
+  "retention_rate_from_positive_tip_population": 0.9999313475799619,
+  "rows_removed_from_positive_tip_population": 256,
+  "scan_seconds": 4.264,
+  "source_file": "data/raw/fhvhv_tripdata_2024-01.parquet",
+  "status": "PASS",
+  "unmatched_zone_rows": 0,
+  "weekday_counts": {
+    "Friday": 511423,
+    "Monday": 524308,
+    "Saturday": 580354,
+    "Sunday": 470832,
+    "Thursday": 488555,
+    "Tuesday": 567054,
+    "Wednesday": 586147
+  }
+}
