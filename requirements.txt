@@ -3,3 +3,4 @@ pyarrow>=18,<23
 requests>=2.32,<3
 pytest>=8,<10
 ruff>=0.8,<1
+numpy>=1.26,<3
