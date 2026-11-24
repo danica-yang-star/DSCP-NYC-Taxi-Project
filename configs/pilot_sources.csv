@@ -1,0 +1,3 @@
+source_id,kind,year,month,url,local_path
+fhvhv_2024_01,parquet,2024,1,https://d37ci6vzurychx.cloudfront.net/trip-data/fhvhv_tripdata_2024-01.parquet,data/raw/fhvhv_tripdata_2024-01.parquet
+taxi_zone_lookup,csv,,,https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv,data/reference/taxi_zone_lookup.csv
