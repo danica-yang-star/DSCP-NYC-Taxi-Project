@@ -1,0 +1,56 @@
+{
+  "cleaning_elapsed_seconds": 25.074,
+  "cluster": "UW Statistics HPC",
+  "counts": {
+    "invalid_pickup_location": 0,
+    "missing_required": 0,
+    "negative_fare": 191,
+    "negative_miles": 0,
+    "negative_tips": 0,
+    "nonfinite_numeric": 0,
+    "pickup_outside_expected_month": 0,
+    "primary_model_eligible_rows": 19653311,
+    "raw_rows": 19663930,
+    "sample_rows": 98754,
+    "shared_positive_tip_rows": 3728908,
+    "shared_valid_rows": 19663739,
+    "shared_zero_fare_rows": 7143,
+    "shared_zero_miles_rows": 3286,
+    "true_unmatched_zone": 0,
+    "unsupported_platform": 0
+  },
+  "cpu_percent": 98,
+  "exit_code": "0:0",
+  "incident": {
+    "failed_job_id": 114207,
+    "prevention": "Deploy the project under shared /workspace and derive PROJECT_DIR from SLURM_SUBMIT_DIR.",
+    "root_cause": "Compute nodes could not access the AFS home directory, so Slurm could not create stdout or stderr."
+  },
+  "input": {
+    "parquet_bytes": 472757547,
+    "zone_lookup_bytes": 12331
+  },
+  "job_id": 114211,
+  "job_state": "COMPLETED",
+  "local_hpc_parity_pass": true,
+  "maximum_resident_set_kb": 513932,
+  "outputs": {
+    "sample_bytes": 1776596,
+    "sample_rows": 98754,
+    "summary_bytes": 156905,
+    "summary_rows": 1953
+  },
+  "partition": "short",
+  "requested_cpus": 1,
+  "requested_memory_mib": 2048,
+  "requested_time_minutes": 10,
+  "resource_accounting_note": "Peak memory comes from /usr/bin/time because Slurm MaxRSS was unavailable.",
+  "row_reconciliation_pass": true,
+  "rules_status": "PROVISIONAL_PENDING_GROUP_APPROVAL",
+  "sample_sha256": "406a260e483baa55ae6882a3145dcbf63548d9837e5e910984f878802cbb9482",
+  "scope": "January 2024 single-month Slurm pilot",
+  "slurm_elapsed_seconds": 28,
+  "status": "PASS",
+  "summary_sha256": "897701248222db70180d4e78db4fcb3d74677d252774938c646e2051c8fe2b6b",
+  "temporary_raw_cleanup_pass": true
+}
