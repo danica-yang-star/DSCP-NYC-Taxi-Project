@@ -1,0 +1,344 @@
+{
+  "file_count": 48,
+  "files": [
+    {
+      "bytes": 374619188,
+      "month": 1,
+      "status_code": 200,
+      "task_id": 1,
+      "year": 2022
+    },
+    {
+      "bytes": 407154284,
+      "month": 2,
+      "status_code": 200,
+      "task_id": 2,
+      "year": 2022
+    },
+    {
+      "bytes": 471233716,
+      "month": 3,
+      "status_code": 200,
+      "task_id": 3,
+      "year": 2022
+    },
+    {
+      "bytes": 455549033,
+      "month": 4,
+      "status_code": 200,
+      "task_id": 4,
+      "year": 2022
+    },
+    {
+      "bytes": 468565693,
+      "month": 5,
+      "status_code": 200,
+      "task_id": 5,
+      "year": 2022
+    },
+    {
+      "bytes": 458193119,
+      "month": 6,
+      "status_code": 200,
+      "task_id": 6,
+      "year": 2022
+    },
+    {
+      "bytes": 443730405,
+      "month": 7,
+      "status_code": 200,
+      "task_id": 7,
+      "year": 2022
+    },
+    {
+      "bytes": 436536084,
+      "month": 8,
+      "status_code": 200,
+      "task_id": 8,
+      "year": 2022
+    },
+    {
+      "bytes": 458009813,
+      "month": 9,
+      "status_code": 200,
+      "task_id": 9,
+      "year": 2022
+    },
+    {
+      "bytes": 495083481,
+      "month": 10,
+      "status_code": 200,
+      "task_id": 10,
+      "year": 2022
+    },
+    {
+      "bytes": 464298215,
+      "month": 11,
+      "status_code": 200,
+      "task_id": 11,
+      "year": 2022
+    },
+    {
+      "bytes": 503674188,
+      "month": 12,
+      "status_code": 200,
+      "task_id": 12,
+      "year": 2022
+    },
+    {
+      "bytes": 473816636,
+      "month": 1,
+      "status_code": 200,
+      "task_id": 13,
+      "year": 2023
+    },
+    {
+      "bytes": 458895583,
+      "month": 2,
+      "status_code": 200,
+      "task_id": 14,
+      "year": 2023
+    },
+    {
+      "bytes": 522484870,
+      "month": 3,
+      "status_code": 200,
+      "task_id": 15,
+      "year": 2023
+    },
+    {
+      "bytes": 491826475,
+      "month": 4,
+      "status_code": 200,
+      "task_id": 16,
+      "year": 2023
+    },
+    {
+      "bytes": 513108369,
+      "month": 5,
+      "status_code": 200,
+      "task_id": 17,
+      "year": 2023
+    },
+    {
+      "bytes": 498799838,
+      "month": 6,
+      "status_code": 200,
+      "task_id": 18,
+      "year": 2023
+    },
+    {
+      "bytes": 492310857,
+      "month": 7,
+      "status_code": 200,
+      "task_id": 19,
+      "year": 2023
+    },
+    {
+      "bytes": 450263712,
+      "month": 8,
+      "status_code": 200,
+      "task_id": 20,
+      "year": 2023
+    },
+    {
+      "bytes": 478067839,
+      "month": 9,
+      "status_code": 200,
+      "task_id": 21,
+      "year": 2023
+    },
+    {
+      "bytes": 485826227,
+      "month": 10,
+      "status_code": 200,
+      "task_id": 22,
+      "year": 2023
+    },
+    {
+      "bytes": 464926008,
+      "month": 11,
+      "status_code": 200,
+      "task_id": 23,
+      "year": 2023
+    },
+    {
+      "bytes": 490453634,
+      "month": 12,
+      "status_code": 200,
+      "task_id": 24,
+      "year": 2023
+    },
+    {
+      "bytes": 472757547,
+      "month": 1,
+      "status_code": 200,
+      "task_id": 25,
+      "year": 2024
+    },
+    {
+      "bytes": 462475428,
+      "month": 2,
+      "status_code": 200,
+      "task_id": 26,
+      "year": 2024
+    },
+    {
+      "bytes": 507940560,
+      "month": 3,
+      "status_code": 200,
+      "task_id": 27,
+      "year": 2024
+    },
+    {
+      "bytes": 476115643,
+      "month": 4,
+      "status_code": 200,
+      "task_id": 28,
+      "year": 2024
+    },
+    {
+      "bytes": 498575918,
+      "month": 5,
+      "status_code": 200,
+      "task_id": 29,
+      "year": 2024
+    },
+    {
+      "bytes": 484417715,
+      "month": 6,
+      "status_code": 200,
+      "task_id": 30,
+      "year": 2024
+    },
+    {
+      "bytes": 468437522,
+      "month": 7,
+      "status_code": 200,
+      "task_id": 31,
+      "year": 2024
+    },
+    {
+      "bytes": 465991646,
+      "month": 8,
+      "status_code": 200,
+      "task_id": 32,
+      "year": 2024
+    },
+    {
+      "bytes": 466470118,
+      "month": 9,
+      "status_code": 200,
+      "task_id": 33,
+      "year": 2024
+    },
+    {
+      "bytes": 485102359,
+      "month": 10,
+      "status_code": 200,
+      "task_id": 34,
+      "year": 2024
+    },
+    {
+      "bytes": 480228052,
+      "month": 11,
+      "status_code": 200,
+      "task_id": 35,
+      "year": 2024
+    },
+    {
+      "bytes": 507534115,
+      "month": 12,
+      "status_code": 200,
+      "task_id": 36,
+      "year": 2024
+    },
+    {
+      "bytes": 491076642,
+      "month": 1,
+      "status_code": 200,
+      "task_id": 37,
+      "year": 2025
+    },
+    {
+      "bytes": 461632254,
+      "month": 2,
+      "status_code": 200,
+      "task_id": 38,
+      "year": 2025
+    },
+    {
+      "bytes": 501783767,
+      "month": 3,
+      "status_code": 200,
+      "task_id": 39,
+      "year": 2025
+    },
+    {
+      "bytes": 487219586,
+      "month": 4,
+      "status_code": 200,
+      "task_id": 40,
+      "year": 2025
+    },
+    {
+      "bytes": 517386544,
+      "month": 5,
+      "status_code": 200,
+      "task_id": 41,
+      "year": 2025
+    },
+    {
+      "bytes": 490819474,
+      "month": 6,
+      "status_code": 200,
+      "task_id": 42,
+      "year": 2025
+    },
+    {
+      "bytes": 487222980,
+      "month": 7,
+      "status_code": 200,
+      "task_id": 43,
+      "year": 2025
+    },
+    {
+      "bytes": 479574607,
+      "month": 8,
+      "status_code": 200,
+      "task_id": 44,
+      "year": 2025
+    },
+    {
+      "bytes": 480851341,
+      "month": 9,
+      "status_code": 200,
+      "task_id": 45,
+      "year": 2025
+    },
+    {
+      "bytes": 518486063,
+      "month": 10,
+      "status_code": 200,
+      "task_id": 46,
+      "year": 2025
+    },
+    {
+      "bytes": 507485661,
+      "month": 11,
+      "status_code": 200,
+      "task_id": 47,
+      "year": 2025
+    },
+    {
+      "bytes": 535754793,
+      "month": 12,
+      "status_code": 200,
+      "task_id": 48,
+      "year": 2025
+    }
+  ],
+  "status": "PASS",
+  "total_bytes": 22992767602,
+  "total_gib": 21.413683520630002
+}

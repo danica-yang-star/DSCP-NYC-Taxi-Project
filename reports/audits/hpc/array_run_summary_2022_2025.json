@@ -1,0 +1,35 @@
+{
+  "all_audits_pass": true,
+  "array_job_id": 114212,
+  "cleaning_seconds": {
+    "maximum": 51.395,
+    "median": 45.6625,
+    "minimum": 33.73
+  },
+  "cleanup_pass_count": 48,
+  "cluster": "UW Statistics HPC",
+  "completed_task_count": 48,
+  "input_total_bytes": 22992767602,
+  "input_total_gib": 21.413683520630002,
+  "maximum_resident_set_kb": {
+    "maximum": 714584,
+    "median": 560798.0,
+    "minimum": 490660
+  },
+  "maximum_resident_set_mib": 697.8359375,
+  "month_count": 48,
+  "nonempty_error_count": 0,
+  "partition": "short",
+  "row_reconciliation_pass": true,
+  "rules_status": "PROVISIONAL_PENDING_GROUP_APPROVAL",
+  "sample_output_bytes": 84903529,
+  "scope": "2022-01 through 2025-12",
+  "status": "PASS",
+  "summary_output_bytes": 7585945,
+  "task_count": 48,
+  "total_positive_tip_rows": 180550299,
+  "total_primary_model_eligible_rows": 927013004,
+  "total_raw_rows": 927966235,
+  "total_sample_rows": 4639013,
+  "total_shared_valid_rows": 927632367
+}
