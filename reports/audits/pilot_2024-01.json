@@ -1,0 +1,98 @@
+{
+  "audit_counts": {
+    "fare_nonpositive": 7334,
+    "miles_nonpositive": 3286,
+    "pickup_location_outside_1_265": 0,
+    "pickup_outside_2024_01": 0,
+    "rows_scanned": 19663930,
+    "tips_negative": 0,
+    "tips_positive": 3728929,
+    "tips_zero": 15935001
+  },
+  "file_bytes": 472757547,
+  "hvfhs_license_values": [
+    "HV0003",
+    "HV0005"
+  ],
+  "metadata_rows": 19663930,
+  "missing_required_columns": [],
+  "null_counts": {
+    "PULocationID": 0,
+    "base_passenger_fare": 0,
+    "hvfhs_license_num": 0,
+    "pickup_datetime": 0,
+    "tips": 0,
+    "trip_miles": 0
+  },
+  "positive_tip_rate_among_all_rows": 0.18963294722875845,
+  "ranges": {
+    "base_passenger_fare": [
+      -43.09,
+      1911.16
+    ],
+    "pickup_datetime": [
+      "2024-01-01 00:00:00",
+      "2024-01-31 23:59:59"
+    ],
+    "tips": [
+      0.0,
+      196.8
+    ],
+    "trip_miles": [
+      0.0,
+      417.62
+    ]
+  },
+  "required_columns": [
+    "hvfhs_license_num",
+    "pickup_datetime",
+    "PULocationID",
+    "base_passenger_fare",
+    "trip_miles",
+    "tips"
+  ],
+  "row_groups": 19,
+  "scan_seconds": 0.906,
+  "schema": {
+    "DOLocationID": "int32",
+    "PULocationID": "int32",
+    "access_a_ride_flag": "large_string",
+    "airport_fee": "double",
+    "base_passenger_fare": "double",
+    "bcf": "double",
+    "congestion_surcharge": "double",
+    "dispatching_base_num": "large_string",
+    "driver_pay": "double",
+    "dropoff_datetime": "timestamp[us]",
+    "hvfhs_license_num": "large_string",
+    "on_scene_datetime": "timestamp[us]",
+    "originating_base_num": "large_string",
+    "pickup_datetime": "timestamp[us]",
+    "request_datetime": "timestamp[us]",
+    "sales_tax": "double",
+    "shared_match_flag": "large_string",
+    "shared_request_flag": "large_string",
+    "tips": "double",
+    "tolls": "double",
+    "trip_miles": "double",
+    "trip_time": "int64",
+    "wav_match_flag": "large_string",
+    "wav_request_flag": "large_string"
+  },
+  "sha256": "9897de352aa52cea36b70348cc6721b8d4494327ce39c85f0dba83d86ecaa098",
+  "source_file": "data/raw/fhvhv_tripdata_2024-01.parquet",
+  "status": "PASS",
+  "zone_lookup": {
+    "columns": [
+      "LocationID",
+      "Borough",
+      "Zone",
+      "service_zone"
+    ],
+    "duplicate_location_ids": 0,
+    "maximum_location_id": 265,
+    "minimum_location_id": 1,
+    "missing_expected_columns": [],
+    "rows": 265
+  }
+}

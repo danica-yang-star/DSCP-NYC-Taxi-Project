@@ -1,0 +1,18 @@
+{
+  "fare_and_miles_nonpositive_positive_tip": 0,
+  "fare_negative_all": 191,
+  "fare_negative_positive_tip": 21,
+  "fare_or_miles_nonpositive_positive_tip": 256,
+  "fare_zero_all": 7143,
+  "fare_zero_positive_tip": 21,
+  "miles_negative_all": 0,
+  "miles_negative_positive_tip": 0,
+  "miles_zero_all": 3286,
+  "miles_zero_positive_tip": 214,
+  "positive_tip_above_100": 55,
+  "positive_tip_above_50": 2094,
+  "positive_tip_rows": 3728929,
+  "positive_tip_with_tip_rate_above_1": 6429,
+  "positive_tip_with_tip_rate_above_2": 770,
+  "rows": 19663930
+}
