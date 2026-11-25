@@ -1,0 +1,75 @@
+{
+  "adjusted_predictions_output": "reports/group_b/bq2/adjusted_predictions_pilot.csv",
+  "analysis_id": "group_b_bq2_main_effects_v1",
+  "analysis_status": "FROZEN_BEFORE_MAIN_EFFECTS_FIT",
+  "cluster_count": 48,
+  "cluster_variable": "year_month",
+  "effect_table_output": "reports/group_b/bq2/effect_table_pilot.csv",
+  "elapsed_seconds": 5.454,
+  "figures": [
+    "bq2_primary_effects_pilot.png",
+    "bq2_adjusted_predictions_pilot.png"
+  ],
+  "group_b_rows_available": 903434,
+  "incremental_fit": {
+    "m1_minus_m0_adjusted_r_squared": 0.007461782567362629,
+    "m1_minus_m0_r_squared": 0.007470620492420421
+  },
+  "models": {
+    "M0_trip_time": {
+      "adjusted_r_squared": 0.5748516526288183,
+      "aic": 297035.95482524036,
+      "bic": 297485.0220216437,
+      "formula": "log_tips ~ log_fare + log1p_miles + C(pickup_hour, Treatment(reference=0)) + C(pickup_weekday, Treatment(reference=\"Monday\")) + year_centered + C(month, Treatment(reference=1))",
+      "nobs": 200000,
+      "parameter_count": 44,
+      "r_squared": 0.5749430599805399,
+      "residual_standard_deviation_log_scale": 0.5084142891015896
+    },
+    "M1_primary_main_effects": {
+      "adjusted_r_squared": 0.582313435196181,
+      "aic": 293499.5827876044,
+      "bic": 293999.6803472354,
+      "formula": "log_tips ~ log_fare + log1p_miles + C(pickup_hour, Treatment(reference=0)) + C(pickup_weekday, Treatment(reference=\"Monday\")) + year_centered + C(month, Treatment(reference=1)) + C(borough_for_model, Treatment(reference=\"Manhattan\")) + C(platform, Treatment(reference=\"Uber\"))",
+      "nobs": 200000,
+      "parameter_count": 49,
+      "r_squared": 0.5824136804729603,
+      "residual_standard_deviation_log_scale": 0.5039329471014429
+    }
+  },
+  "observational_boundary": "Conditional associations among valid trips with recorded positive tips; no causal interpretation.",
+  "primary_effects": {
+    "distance_plus_one_mile": {
+      "average_dollar_change": 0.01642698564886002,
+      "average_dollar_ci_high": 0.02524111333439694,
+      "average_dollar_ci_low": 0.007632623296609586,
+      "average_percent_change": 0.2772294549096143,
+      "average_percent_ci_high": 0.4259807758152069,
+      "average_percent_ci_low": 0.1288117029673269,
+      "label": "add one trip mile"
+    },
+    "fare_10_percent": {
+      "ci_high": 8.374363495657047,
+      "ci_low": 8.058986362874293,
+      "label": "10% increase in base passenger fare",
+      "percent_change": 8.216560040792215
+    },
+    "lyft_vs_uber": {
+      "ci_high": 14.235702532596298,
+      "ci_low": 12.378846459053735,
+      "label": "Lyft versus Uber",
+      "percent_change": 13.303470710533732
+    },
+    "one_year_trend": {
+      "ci_high": -0.3534576704780342,
+      "ci_low": -0.8676582013229023,
+      "label": "one-calendar-year increase",
+      "percent_change": -0.6108904694960198
+    }
+  },
+  "rows_used": 200000,
+  "run_mode": "PILOT",
+  "sample_directory_name": "samples",
+  "smearing_factor": 1.120912945506195,
+  "status": "PASS"
+}

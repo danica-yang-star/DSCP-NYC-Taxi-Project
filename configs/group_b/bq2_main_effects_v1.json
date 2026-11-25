@@ -1,0 +1,43 @@
+{
+  "analysis_id": "group_b_bq2_main_effects_v1",
+  "status": "FROZEN_BEFORE_MAIN_EFFECTS_FIT",
+  "parent_model_decision": "reports/group_b/b2/model_selection_decision.json",
+  "population": "valid_for_primary_model == True and tips > 0",
+  "response": "log(tips)",
+  "retransformation": "Duan smearing estimator",
+  "inference": "cluster-robust standard errors by year-month with finite-cluster correction",
+  "models": {
+    "M0_trip_time": [
+      "log_base_passenger_fare",
+      "log1p_trip_miles",
+      "pickup_hour",
+      "pickup_weekday",
+      "month",
+      "year_centered"
+    ],
+    "M1_primary_main_effects": [
+      "all M0 terms",
+      "pickup_borough_model",
+      "platform"
+    ]
+  },
+  "reference_levels": {
+    "pickup_hour": 0,
+    "pickup_weekday": "Monday",
+    "month": 1,
+    "pickup_borough_model": "Manhattan",
+    "platform": "Uber"
+  },
+  "primary_effect_summaries": [
+    "10 percent increase in base passenger fare",
+    "one-mile increase in trip distance",
+    "one-calendar-year increase",
+    "Lyft versus Uber",
+    "borough versus Manhattan"
+  ],
+  "automatic_term_selection": false,
+  "causal_interpretation": false,
+  "random_seed": 20261125,
+  "local_pilot_maximum_rows": 200000,
+  "full_hpc_maximum_rows": null
+}
