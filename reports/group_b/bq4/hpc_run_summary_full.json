@@ -1,0 +1,47 @@
+{
+  "allocated_cpus": 4,
+  "analysis_id": "group_b_bq4_sensitivity_v1",
+  "bq2_bq4_primary_consistency": "PASS",
+  "cluster": "UW Statistics HPC",
+  "cpu_percent": 142,
+  "exit_code": "0:0",
+  "group_b_rows": 903434,
+  "job_id": 114280,
+  "leave_one_year_out_count": 4,
+  "model_elapsed_seconds": 368.471,
+  "output_bytes": {
+    "bq4_leave_one_year_out_full.png": 163579,
+    "bq4_sensitivity_summary_full.png": 118981,
+    "leave_one_year_out_full.csv": 1223,
+    "sensitivity_full.json": 2157,
+    "sensitivity_scenarios_full.csv": 4117
+  },
+  "output_sha256": {
+    "bq4_leave_one_year_out_full.png": "91ba29dc4d49b1eadfc48aa01dd5759f75b0afa7b3ffa4d64d3127a7af583bce",
+    "bq4_sensitivity_summary_full.png": "57a1a104c1639910fb5b57251fc5e135e93fa5414e76ea486d7b6cbbffd78a13",
+    "leave_one_year_out_full.csv": "0952289a8d631866643aef68677f5fdc556220da3cee4532825aa771f42d4573",
+    "sensitivity_full.json": "b2b83437938674db3f91cbed1e48b93eb84acc5e03087936aa20e578b73339e4",
+    "sensitivity_scenarios_full.csv": "ee8a7315001dd9e023d58c031ec14d28a81cb79bdc65899b4663cfbe1ddf4873"
+  },
+  "partition": "short",
+  "requested_memory": "12G",
+  "sacct_elapsed": "00:06:14",
+  "scenario_count": 7,
+  "slurm_max_rss_kb": 9406392,
+  "source_commit": "003f2561b323ed05b9125af04d8b0c5e980ce6b9",
+  "state": "COMPLETED",
+  "status": "PASS",
+  "stderr_bytes": 0,
+  "superseded_jobs": [
+    {
+      "job_id": 114278,
+      "reason": "Used the pre-standardization distance-effect definition"
+    },
+    {
+      "job_id": 114279,
+      "reason": "Ran stale commit afa9675 before fetching the corrected implementation"
+    }
+  ],
+  "time_max_rss_kb": 10215824,
+  "wall_clock_seconds": 372.48
+}
