@@ -52,6 +52,7 @@ python --version
 
 python scripts/group_b/audit_bq4_acceptance.py \
     --report "$REPORT_OUTPUT" \
+    --bq2-report reports/group_b/bq2/main_effects_full.json \
     --scenarios "$SCENARIOS_OUTPUT" \
     --leave-one-year-out "$LOO_OUTPUT" \
     --figure-dir "$FIGURE_DIR" \

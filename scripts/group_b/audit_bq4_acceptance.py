@@ -23,6 +23,7 @@ EXPECTED_SCENARIOS = {
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--report", type=Path, required=True)
+    parser.add_argument("--bq2-report", type=Path, required=True)
     parser.add_argument("--scenarios", type=Path, required=True)
     parser.add_argument("--leave-one-year-out", type=Path, required=True)
     parser.add_argument("--figure-dir", type=Path, required=True)
@@ -33,6 +34,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     report = json.loads(args.report.read_text(encoding="utf-8"))
+    bq2_report = json.loads(args.bq2_report.read_text(encoding="utf-8"))
     scenarios = pd.read_csv(args.scenarios)
     loo = pd.read_csv(args.leave_one_year_out)
     errors: list[str] = []
@@ -50,6 +52,32 @@ def main() -> None:
         errors.append("primary rows do not match frozen run mode")
     if set(scenarios["scenario"]) != EXPECTED_SCENARIOS:
         errors.append("sensitivity scenario set is incomplete")
+    if args.expected_mode == "FULL":
+        primary = scenarios.loc[scenarios["scenario"] == "primary"]
+        if len(primary) != 1:
+            errors.append("primary sensitivity row is missing or duplicated")
+        else:
+            expected = {
+                "fare_10_percent": bq2_report["primary_effects"]["fare_10_percent"][
+                    "percent_change"
+                ],
+                "distance_plus_one_mile_percent": bq2_report["primary_effects"][
+                    "distance_plus_one_mile"
+                ]["average_percent_change"],
+                "one_year_percent": bq2_report["primary_effects"]["one_year_trend"][
+                    "percent_change"
+                ],
+                "lyft_vs_uber_percent": bq2_report["primary_effects"]["lyft_vs_uber"][
+                    "percent_change"
+                ],
+            }
+            for field, expected_value in expected.items():
+                observed = float(primary.iloc[0][field])
+                if not np.isclose(observed, expected_value, rtol=0.0, atol=1e-10):
+                    errors.append(
+                        f"B-Q2/B-Q4 primary mismatch for {field}: "
+                        f"{observed} versus {expected_value}"
+                    )
     if len(loo) != 4 or set(loo["omitted_year"]) != {2022, 2023, 2024, 2025}:
         errors.append("leave-one-year-out set is incomplete")
     if not np.isfinite(report.get("pooled_tip_p99_9", np.nan)):
@@ -118,6 +146,10 @@ def main() -> None:
             f"leave_one_year_out_{effect}_range={item['minimum']:.6f} to "
             f"{item['maximum']:.6f}; direction_stable={item['direction_stable']}"
         )
+    if args.expected_mode == "FULL":
+        print("bq2_bq4_primary_consistency=PASS")
+    else:
+        print("bq2_bq4_primary_consistency=NOT_APPLICABLE_FOR_PILOT")
     print("GROUP B B-Q4 ACCEPTANCE: PASS")
 
 

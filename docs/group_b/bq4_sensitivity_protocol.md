@@ -30,3 +30,5 @@ The execution quality gate checks completeness, finite estimates, row reconcilia
 - Lyft-versus-Uber percentage difference.
 
 All results remain conditional associations among trips with recorded positive tips. Tail exclusions and alternative outcomes are diagnostic checks, not evidence that excluded records are erroneous.
+
+The full-run quality gate also requires the primary B-Q4 effects to reproduce the frozen B-Q2 full-run effects within numerical tolerance.
