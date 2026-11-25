@@ -1,0 +1,59 @@
+{
+  "analysis_id": "group_b_bq3_interactions_v1",
+  "analysis_status": "FROZEN_BEFORE_INTERACTION_FIT",
+  "cluster_count": 48,
+  "contrast_count": 20,
+  "contrasts_output": "reports/group_b/bq3/platform_contrasts_full.csv",
+  "elapsed_seconds": 36.448,
+  "figures": [
+    "bq3_platform_contrasts_full.png",
+    "bq3_standardized_predictions_full.png"
+  ],
+  "group_b_rows_available": 903434,
+  "incremental_fit": {
+    "m2_minus_m1_adjusted_r_squared": 0.000115561094655936,
+    "m2_minus_m1_r_squared": 0.00011785949073261914
+  },
+  "joint_tests": {
+    "platform_by_borough": {
+      "degrees_of_freedom": 4,
+      "p_value": 1.506666659530147e-39,
+      "statistic": 187.8884167300886
+    },
+    "platform_by_year": {
+      "degrees_of_freedom": 1,
+      "p_value": 4.3750178836201904e-07,
+      "statistic": 25.52140661785929
+    }
+  },
+  "models": {
+    "M1_primary_main_effects": {
+      "adjusted_r_squared": 0.583485679840321,
+      "aic": 1327338.9523010154,
+      "bic": 1327912.936259533,
+      "formula": "log_tips ~ log_fare + log1p_miles + C(pickup_hour, Treatment(reference=0)) + C(pickup_weekday, Treatment(reference=\"Monday\")) + year_centered + C(month, Treatment(reference=1)) + C(borough_for_model, Treatment(reference=\"Manhattan\")) + C(platform, Treatment(reference=\"Uber\"))",
+      "nobs": 903434,
+      "parameter_count": 49,
+      "r_squared": 0.5835078095249435,
+      "residual_standard_deviation_log_scale": 0.5044139300289048
+    },
+    "M2_prespecified_interactions": {
+      "adjusted_r_squared": 0.5836012409349769,
+      "aic": 1327093.2612169876,
+      "bic": 1327725.8149671906,
+      "formula": "log_tips ~ log_fare + log1p_miles + C(pickup_hour, Treatment(reference=0)) + C(pickup_weekday, Treatment(reference=\"Monday\")) + C(borough_for_model, Treatment(reference=\"Manhattan\")) + C(platform, Treatment(reference=\"Uber\")) + year_centered + C(month, Treatment(reference=1)) + lyft_x_year + lyft_x_bronx + lyft_x_brooklyn + lyft_x_queens + lyft_x_staten_island",
+      "nobs": 903434,
+      "parameter_count": 54,
+      "r_squared": 0.5836256690156761,
+      "residual_standard_deviation_log_scale": 0.5043439508387441
+    }
+  },
+  "observational_boundary": "Conditional platform heterogeneity among valid trips with recorded positive tips; no causal interpretation.",
+  "prediction_count": 40,
+  "predictions_output": "reports/group_b/bq3/standardized_predictions_full.csv",
+  "rows_used": 903434,
+  "run_mode": "FULL",
+  "sample_directory_name": "samples",
+  "smearing_factor": 1.1209920516101033,
+  "status": "PASS"
+}
