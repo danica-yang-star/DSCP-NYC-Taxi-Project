@@ -1,0 +1,49 @@
+{
+  "model_spec_id": "group_b_candidate_models_v1",
+  "status": "FROZEN_BEFORE_CANDIDATE_FIT",
+  "parent_analysis_id": "group_b_positive_tip_v1",
+  "amendment": "analysis_plan_amendment_001",
+  "development_years": [2022, 2023, 2024],
+  "validation_years": [2025],
+  "random_seed": 20261125,
+  "local_pilot": {
+    "maximum_development_rows": 150000,
+    "maximum_validation_rows": 75000
+  },
+  "full_run": {
+    "maximum_development_rows": null,
+    "maximum_validation_rows": null
+  },
+  "candidate_models": [
+    "lognormal_ols_duan_smearing",
+    "gamma_glm_log_link"
+  ],
+  "continuous_terms": [
+    "log_base_passenger_fare",
+    "log1p_trip_miles",
+    "year_centered"
+  ],
+  "categorical_terms": [
+    "pickup_hour",
+    "pickup_weekday",
+    "borough_for_model",
+    "platform",
+    "month"
+  ],
+  "interaction_terms": [
+    "Lyft x year_centered",
+    "Lyft x Bronx",
+    "Lyft x Brooklyn",
+    "Lyft x Queens",
+    "Lyft x Staten Island"
+  ],
+  "unknown_borough_policy": "Retain observations and pool Other/Unknown with the Manhattan reference adjustment; do not interpret geographically.",
+  "candidate_selection_status": "AWAITING_DIAGNOSTIC_REVIEW",
+  "selection_metrics": [
+    "2025 dollar-scale MAE",
+    "2025 dollar-scale RMSE",
+    "2025 mean prediction error",
+    "calibration by predicted-tip decile",
+    "residual diagnostics"
+  ]
+}
