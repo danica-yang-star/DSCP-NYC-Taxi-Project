@@ -82,9 +82,19 @@ def _percent(coefficient: float) -> float:
     return 100.0 * math.expm1(coefficient)
 
 
-def _distance_effect(coefficient: float, miles: np.ndarray) -> float:
+def _distance_effect(
+    result: Any,
+    coefficient: float,
+    frame: pd.DataFrame,
+) -> float:
+    miles = frame["trip_miles"].to_numpy(dtype=float)
     delta = np.log1p(miles + 1.0) - np.log1p(miles)
-    return 100.0 * float(np.mean(np.expm1(coefficient * delta)))
+    fitted = np.asarray(result.predict(frame), dtype=float)
+    outcome = str(result.model.endog_names)
+    weights = np.exp(fitted) if outcome.startswith("log_") else fitted
+    if not np.isfinite(weights).all() or (weights <= 0).any():
+        raise ValueError("Distance-standardization weights must be finite and positive")
+    return 100.0 * float(np.average(np.expm1(coefficient * delta), weights=weights))
 
 
 def extract_core_effects(result: Any, frame: pd.DataFrame) -> dict[str, float | None]:
@@ -113,12 +123,11 @@ def extract_core_effects(result: Any, frame: pd.DataFrame) -> dict[str, float | 
 
     if "log1p_miles" in names:
         estimate, low, high = _interval(result, "log1p_miles")
-        miles = frame["trip_miles"].to_numpy(dtype=float)
         output.update(
             {
-                "distance_plus_one_mile_percent": _distance_effect(estimate, miles),
-                "distance_ci_low": _distance_effect(low, miles),
-                "distance_ci_high": _distance_effect(high, miles),
+                "distance_plus_one_mile_percent": _distance_effect(result, estimate, frame),
+                "distance_ci_low": _distance_effect(result, low, frame),
+                "distance_ci_high": _distance_effect(result, high, frame),
             }
         )
     else:

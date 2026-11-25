@@ -27,7 +27,12 @@ def test_frozen_sensitivity_formulas() -> None:
     assert "log_fare" not in TIP_RATE_FORMULA
 
 
+class FakeModel:
+    endog_names = "log_tips"
+
+
 class FakeResult:
+    model = FakeModel()
     params = pd.Series(
         {
             "log_fare": 0.8,
@@ -36,6 +41,9 @@ class FakeResult:
             PLATFORM_TERM: math.log(1.1),
         }
     )
+
+    def predict(self, frame: pd.DataFrame) -> np.ndarray:
+        return np.log(np.linspace(3.0, 6.0, len(frame)))
 
     def conf_int(self) -> pd.DataFrame:
         return pd.DataFrame(
@@ -51,7 +59,16 @@ def test_core_effect_extraction() -> None:
     effects = extract_core_effects(FakeResult(), frame)
 
     assert effects["fare_10_percent"] > 0
-    assert effects["distance_plus_one_mile_percent"] > 0
+    miles = frame["trip_miles"].to_numpy(dtype=float)
+    delta = np.log1p(miles + 1.0) - np.log1p(miles)
+    expected = 100.0 * np.average(
+        np.expm1(0.1 * delta),
+        weights=np.linspace(3.0, 6.0, len(frame)),
+    )
+    assert math.isclose(
+        effects["distance_plus_one_mile_percent"],
+        expected,
+    )
     assert effects["one_year_percent"] < 0
     assert math.isclose(effects["lyft_vs_uber_percent"], 10.0)
 

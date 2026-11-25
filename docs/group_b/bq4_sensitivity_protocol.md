@@ -25,7 +25,7 @@ The execution quality gate checks completeness, finite estimates, row reconcilia
 ## Reported effects
 
 - percentage difference for a 10% fare increase;
-- average percentage difference after adding one trip mile;
+- standardized percentage difference in the mean retransformed prediction after adding one trip mile, using the frozen B-Q2 definition;
 - percentage difference for one calendar year;
 - Lyft-versus-Uber percentage difference.
 

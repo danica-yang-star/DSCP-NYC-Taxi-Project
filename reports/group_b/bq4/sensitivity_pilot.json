@@ -1,7 +1,7 @@
 {
   "analysis_id": "group_b_bq4_sensitivity_v1",
   "analysis_status": "FROZEN_BEFORE_SENSITIVITY_FITS",
-  "elapsed_seconds": 14.216,
+  "elapsed_seconds": 34.298,
   "figures": [
     "bq4_sensitivity_summary_pilot.png",
     "bq4_leave_one_year_out_pilot.png"
@@ -13,8 +13,8 @@
   "leave_one_year_out_stability": {
     "distance_plus_one_mile_percent": {
       "direction_stable": true,
-      "maximum": 0.5491890793777063,
-      "minimum": 0.13595668689997314,
+      "maximum": 0.3984187468736579,
+      "minimum": 0.09730593013838598,
       "scenario_count": 4
     },
     "fare_10_percent": {
@@ -45,8 +45,8 @@
   "stability_summary": {
     "distance_plus_one_mile_percent": {
       "direction_stable": true,
-      "maximum": 17.02012221778538,
-      "minimum": 0.31020111879176304,
+      "maximum": 12.001967424634778,
+      "minimum": 0.22382411605924643,
       "scenario_count": 5
     },
     "fare_10_percent": {
