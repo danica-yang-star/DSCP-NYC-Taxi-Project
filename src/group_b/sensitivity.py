@@ -288,7 +288,7 @@ def run_sensitivity(
         raise ValueError("B-Q4 configuration was not frozen before fitting")
 
     dataset = ds.dataset(sample_dir, format="parquet")
-    population_filter = (ds.field("valid_for_primary_model") == True) & (ds.field("tips") > 0)
+    population_filter = ds.field("valid_for_primary_model").isin([True]) & (ds.field("tips") > 0)
     full_frame = dataset.to_table(
         columns=list(SOURCE_COLUMNS), filter=population_filter
     ).to_pandas()

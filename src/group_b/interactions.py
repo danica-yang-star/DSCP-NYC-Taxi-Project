@@ -329,7 +329,8 @@ def run_interactions(
         "analysis_status": config["status"],
         "run_mode": run_mode,
         "observational_boundary": (
-            "Conditional platform heterogeneity among valid trips with recorded positive tips; no causal interpretation."
+            "Conditional platform heterogeneity among valid trips with recorded "
+            "positive tips; no causal interpretation."
         ),
         "sample_directory_name": sample_dir.name,
         "group_b_rows_available": int(available_rows),

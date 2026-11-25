@@ -1,7 +1,7 @@
 {
   "analysis_id": "group_b_bq4_sensitivity_v1",
   "analysis_status": "FROZEN_BEFORE_SENSITIVITY_FITS",
-  "elapsed_seconds": 24.168,
+  "elapsed_seconds": 14.216,
   "figures": [
     "bq4_sensitivity_summary_pilot.png",
     "bq4_leave_one_year_out_pilot.png"

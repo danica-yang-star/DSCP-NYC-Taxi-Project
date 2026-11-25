@@ -361,7 +361,8 @@ def run_main_effects(
         "analysis_status": config["status"],
         "run_mode": run_mode,
         "observational_boundary": (
-            "Conditional associations among valid trips with recorded positive tips; no causal interpretation."
+            "Conditional associations among valid trips with recorded positive "
+            "tips; no causal interpretation."
         ),
         "sample_directory_name": sample_dir.name,
         "group_b_rows_available": int(available_rows),
