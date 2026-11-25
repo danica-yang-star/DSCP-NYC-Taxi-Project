@@ -1,0 +1,33 @@
+{
+  "analysis_id": "group_b_bq3_interactions_v1",
+  "status": "FROZEN_BEFORE_INTERACTION_FIT",
+  "parent_analysis": "group_b_bq2_main_effects_v1",
+  "population": "valid_for_primary_model == True and tips > 0",
+  "response": "log(tips)",
+  "retransformation": "Duan smearing estimator",
+  "base_model": "M1_primary_main_effects",
+  "interaction_model": "M2_prespecified_interactions",
+  "prespecified_interactions": [
+    "platform x pickup_borough_model",
+    "platform x year_centered"
+  ],
+  "joint_tests": {
+    "platform_by_borough": [
+      "lyft_x_bronx",
+      "lyft_x_brooklyn",
+      "lyft_x_queens",
+      "lyft_x_staten_island"
+    ],
+    "platform_by_year": [
+      "lyft_x_year"
+    ]
+  },
+  "reported_contrasts": "Lyft versus Uber within each borough and calendar year",
+  "inference": "month-clustered robust covariance with finite-cluster correction",
+  "automatic_interaction_selection": false,
+  "additional_interactions_allowed": false,
+  "causal_interpretation": false,
+  "random_seed": 20261125,
+  "local_pilot_maximum_rows": 250000,
+  "full_hpc_maximum_rows": null
+}
