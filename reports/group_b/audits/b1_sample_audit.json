@@ -1,0 +1,173 @@
+{
+  "analysis_id": "group_b_positive_tip_v1",
+  "analysis_status": "FROZEN_BEFORE_MODELING",
+  "category_counts": {
+    "pickup_borough_model": {
+      "Bronx": 44671,
+      "Brooklyn": 216258,
+      "Manhattan": 445021,
+      "Other/Unknown": 29,
+      "Queens": 185194,
+      "Staten Island": 12261
+    },
+    "pickup_weekday": {
+      "Friday": 138441,
+      "Monday": 112476,
+      "Saturday": 148430,
+      "Sunday": 121526,
+      "Thursday": 132353,
+      "Tuesday": 121775,
+      "Wednesday": 128433
+    },
+    "platform": {
+      "Lyft": 253963,
+      "Uber": 649471
+    }
+  },
+  "config_sha256": "4fdda6037cb0023b37898e7141fd8dc1e82231bcd09ee79660badf4aa0906920",
+  "correlations": {
+    "fare_vs_miles_pearson": 0.8622283960839919,
+    "fare_vs_miles_spearman": 0.8568127502238693,
+    "log_fare_vs_log1p_miles_pearson": 0.8662042554452409,
+    "tips_vs_fare_spearman": 0.7731085718092922,
+    "tips_vs_miles_spearman": 0.6551883229319259
+  },
+  "elapsed_seconds": 2.868,
+  "first_observed_month": "2022-01",
+  "group_b_rows": 903434,
+  "invalid_counts": {
+    "fare_not_positive": 0,
+    "miles_not_positive": 0,
+    "tip_positive_not_true": 0,
+    "tips_not_positive": 0,
+    "unsupported_platform": 0,
+    "valid_for_primary_model_not_true": 0
+  },
+  "last_observed_month": "2025-12",
+  "missing_counts": {
+    "base_passenger_fare": 0,
+    "month": 0,
+    "pickup_borough_model": 0,
+    "pickup_hour": 0,
+    "pickup_weekday": 0,
+    "platform": 0,
+    "sample_weight": 0,
+    "tip_positive": 0,
+    "tips": 0,
+    "trip_miles": 0,
+    "valid_for_primary_model": 0,
+    "year": 0
+  },
+  "monthly_output": "reports/group_b/audits/b1_monthly_counts.csv",
+  "nonfinite_counts": {
+    "base_passenger_fare": 0,
+    "sample_weight": 0,
+    "tips": 0,
+    "trip_miles": 0
+  },
+  "observational_boundary": "Conditional association among trips with tips greater than zero; no causal interpretation.",
+  "observed_month_count": 48,
+  "population_definition": {
+    "tips_strictly_greater_than": 0,
+    "valid_for_primary_model": true
+  },
+  "primary_valid_sample_rows": 4635942,
+  "quantiles": {
+    "base_passenger_fare": {
+      "0.0": 0.1,
+      "0.01": 6.99,
+      "0.05": 8.2,
+      "0.25": 13.6,
+      "0.5": 22.35,
+      "0.75": 37.33,
+      "0.95": 78.73,
+      "0.99": 135.31,
+      "0.999": 237.54536000001244,
+      "1.0": 1356.24
+    },
+    "log_tips": {
+      "0.0": -4.605170185988091,
+      "0.01": 0,
+      "0.05": 0,
+      "0.25": 1.0986122886681098,
+      "0.5": 1.5040773967762742,
+      "0.75": 1.9459101490553132,
+      "0.95": 2.7738379416402132,
+      "0.99": 3.3167282250357055,
+      "0.999": 3.912023005428146,
+      "1.0": 5.693765808269546
+    },
+    "tip_rate": {
+      "0.0": 4.100377234705593e-05,
+      "0.01": 0.051546391752577324,
+      "0.05": 0.07926296020486033,
+      "0.25": 0.12923864363403711,
+      "0.5": 0.19649646154958,
+      "0.75": 0.2508850801122066,
+      "0.95": 0.398936170212766,
+      "0.99": 0.6242197253433208,
+      "0.999": 1.2315270935960592,
+      "1.0": 31.25
+    },
+    "tips": {
+      "0.0": 0.01,
+      "0.01": 1,
+      "0.05": 1,
+      "0.25": 3,
+      "0.5": 4.5,
+      "0.75": 7,
+      "0.95": 16.02,
+      "0.99": 27.57,
+      "0.999": 50,
+      "1.0": 297.01
+    },
+    "trip_miles": {
+      "0.0": 0.01,
+      "0.01": 0.51,
+      "0.05": 0.81,
+      "0.25": 1.68,
+      "0.5": 3.36,
+      "0.75": 7.65,
+      "0.95": 18.26,
+      "0.99": 32.07234000000008,
+      "0.999": 60.33956700000016,
+      "1.0": 258.936
+    }
+  },
+  "sample_directory_name": "samples",
+  "sample_file_bytes": 84903529,
+  "sample_file_count": 48,
+  "sample_weight": {
+    "maximum": 200,
+    "minimum": 200,
+    "unique_count": 1
+  },
+  "schema": {
+    "PULocationID": "int64",
+    "base_passenger_fare": "double",
+    "fare_zero_flag": "bool",
+    "hvfhs_license_num": "string",
+    "miles_zero_flag": "bool",
+    "month": "int64",
+    "pickup_borough_model": "string",
+    "pickup_borough_raw": "string",
+    "pickup_datetime": "timestamp[us]",
+    "pickup_hour": "int32",
+    "pickup_weekday": "string",
+    "platform": "string",
+    "sample_weight": "double",
+    "tip_positive": "bool",
+    "tips": "double",
+    "trip_miles": "double",
+    "valid_for_primary_model": "bool",
+    "year": "int64"
+  },
+  "shared_sample_rows": 4639013,
+  "status": "PASS",
+  "tail_counts": {
+    "tip_rate_above_1": 1651,
+    "tip_rate_above_2": 222,
+    "tips_above_100": 12,
+    "tips_above_50": 658
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "analysis_id": "group_b_positive_tip_v1",
+  "status": "FROZEN_BEFORE_MODELING",
+  "research_question": "Among valid trips with a recorded positive tip, what factors are associated with tip amount?",
+  "estimand_boundary": "Conditional association among trips with tips greater than zero; no causal interpretation.",
+  "population": {
+    "valid_for_primary_model": true,
+    "tips_strictly_greater_than": 0
+  },
+  "outcome_candidates": [
+    "log_tips_lognormal_ols",
+    "tips_gamma_glm_log_link"
+  ],
+  "sensitivity_outcome": "tip_rate",
+  "continuous_predictors": [
+    "log_base_passenger_fare",
+    "log1p_trip_miles"
+  ],
+  "categorical_predictors": [
+    "pickup_hour",
+    "pickup_weekday",
+    "pickup_borough_model",
+    "platform",
+    "year",
+    "month"
+  ],
+  "prespecified_interactions": [
+    "platform:pickup_borough_model",
+    "platform:year"
+  ],
+  "reference_levels": {
+    "platform": "Uber",
+    "pickup_borough_model": "Manhattan",
+    "pickup_weekday": "Monday",
+    "year": 2022,
+    "month": 1,
+    "pickup_hour": 0
+  },
+  "model_selection": {
+    "development_period": "2022-01 through 2024-12",
+    "validation_period": "2025-01 through 2025-12",
+    "criteria": [
+      "original-dollar MAE and RMSE on 2025 validation data",
+      "calibration by predicted-tip decile",
+      "residual diagnostics",
+      "interpretability"
+    ],
+    "final_refit_period": "2022-01 through 2025-12"
+  },
+  "inference": {
+    "standard_errors": "cluster-robust by year-month",
+    "significance_screening": false,
+    "report_effect_sizes_and_confidence_intervals": true
+  },
+  "tail_policy": {
+    "primary_analysis": "retain all eligible positive-tip trips",
+    "sensitivity_1": "exclude observations above the pooled 99.9th percentile of tips",
+    "sensitivity_2": "separately examine observations with tip_rate greater than 1",
+    "automatic_outlier_deletion": false
+  },
+  "sampling": {
+    "artifact": "deterministic 0.5 percent monthly sample",
+    "expected_sample_weight": 200,
+    "weight_use": "use for population summaries; constant weights do not change unpenalized coefficient point estimates"
+  }
+}
