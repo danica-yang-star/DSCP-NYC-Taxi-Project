@@ -1,0 +1,53 @@
+{
+  "alternative_model": "gamma_glm_log_link",
+  "analysis_population": "valid_for_primary_model == True and tips > 0",
+  "decision_date": "2026-11-25",
+  "group_b_rows": 903434,
+  "limitations": [
+    "The selected model still underpredicts the highest-tip decile",
+    "The selected model underpredicts the lowest-tip decile",
+    "Several middle deciles are mildly overpredicted",
+    "Log residuals are not perfectly symmetric",
+    "Selection establishes a working response model, not a causal model"
+  ],
+  "next_analysis": {
+    "bq2": "Primary main effects with month-clustered robust standard errors",
+    "bq3": "Prespecified platform-by-borough and platform-by-year interactions",
+    "bq4": "Tail, tip-rate, collinearity, and temporal stability sensitivities"
+  },
+  "reasons": [
+    "Lower 2025 validation RMSE",
+    "Lower 2025 validation MAE",
+    "Lower 2025 median absolute error",
+    "Smaller overall mean prediction error",
+    "Smaller highest-decile calibration error",
+    "Same model led in both pilot and full HPC runs"
+  ],
+  "retransformation": "Duan smearing estimator",
+  "selected_primary_model": "lognormal_ols_duan_smearing",
+  "selected_response": "log(tips)",
+  "selection_evidence": {
+    "gamma_metrics_2025": {
+      "actual_mean": 6.325816282239372,
+      "mae": 2.0160367875391363,
+      "mean_error_actual_minus_predicted": 0.22884254618841154,
+      "median_absolute_error": 1.3822360284031137,
+      "predicted_mean": 6.096973736050961,
+      "rmse": 3.3427382493809885
+    },
+    "highest_decile_absolute_calibration_error": {
+      "gamma_glm_log_link": 2.9819272128356076,
+      "lognormal_ols_duan_smearing": 1.831565226576089
+    },
+    "lognormal_metrics_2025": {
+      "actual_mean": 6.325816282239372,
+      "mae": 1.9792505814243757,
+      "mean_error_actual_minus_predicted": 0.0628956182701736,
+      "median_absolute_error": 1.3341716780332793,
+      "predicted_mean": 6.262920663969199,
+      "rmse": 3.217649160917418
+    },
+    "pilot_and_full_run_agree": true
+  },
+  "status": "FROZEN_AFTER_FULL_HPC_REVIEW"
+}
