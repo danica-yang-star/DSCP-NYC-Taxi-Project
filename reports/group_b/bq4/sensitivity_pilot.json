@@ -1,0 +1,72 @@
+{
+  "analysis_id": "group_b_bq4_sensitivity_v1",
+  "analysis_status": "FROZEN_BEFORE_SENSITIVITY_FITS",
+  "elapsed_seconds": 24.168,
+  "figures": [
+    "bq4_sensitivity_summary_pilot.png",
+    "bq4_leave_one_year_out_pilot.png"
+  ],
+  "full_population_tip_rate_above_1": 1651,
+  "group_b_rows_available": 903434,
+  "leave_one_year_out_count": 4,
+  "leave_one_year_out_output": "reports/group_b/bq4/leave_one_year_out_pilot.csv",
+  "leave_one_year_out_stability": {
+    "distance_plus_one_mile_percent": {
+      "direction_stable": true,
+      "maximum": 0.5491890793777063,
+      "minimum": 0.13595668689997314,
+      "scenario_count": 4
+    },
+    "fare_10_percent": {
+      "direction_stable": true,
+      "maximum": 8.454267233558511,
+      "minimum": 8.065649623271616,
+      "scenario_count": 4
+    },
+    "lyft_vs_uber_percent": {
+      "direction_stable": true,
+      "maximum": 14.53767024014021,
+      "minimum": 12.459197917804776,
+      "scenario_count": 4
+    },
+    "one_year_percent": {
+      "direction_stable": true,
+      "maximum": -0.47355346214712596,
+      "minimum": -1.0084561365352473,
+      "scenario_count": 4
+    }
+  },
+  "observational_boundary": "Sensitivity checks for conditional associations; no causal interpretation.",
+  "pooled_tip_p99_9": 50.0,
+  "primary_rows_used": 120000,
+  "run_mode": "PILOT",
+  "scenario_count": 7,
+  "scenarios_output": "reports/group_b/bq4/sensitivity_scenarios_pilot.csv",
+  "stability_summary": {
+    "distance_plus_one_mile_percent": {
+      "direction_stable": true,
+      "maximum": 17.02012221778538,
+      "minimum": 0.31020111879176304,
+      "scenario_count": 5
+    },
+    "fare_10_percent": {
+      "direction_stable": true,
+      "maximum": 8.3960365314081,
+      "minimum": 7.5132426945335995,
+      "scenario_count": 5
+    },
+    "lyft_vs_uber_percent": {
+      "direction_stable": true,
+      "maximum": 13.886606547747366,
+      "minimum": 6.9433693732261395,
+      "scenario_count": 6
+    },
+    "one_year_percent": {
+      "direction_stable": false,
+      "maximum": 4.086910863181652,
+      "minimum": -0.7331842122103569,
+      "scenario_count": 6
+    }
+  },
+  "status": "PASS"
+}

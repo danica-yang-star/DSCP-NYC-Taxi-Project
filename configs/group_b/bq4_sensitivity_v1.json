@@ -1,0 +1,30 @@
+{
+  "analysis_id": "group_b_bq4_sensitivity_v1",
+  "status": "FROZEN_BEFORE_SENSITIVITY_FITS",
+  "parent_analysis": "group_b_bq2_main_effects_v1",
+  "primary_response": "log(tips)",
+  "primary_model": "M1_primary_main_effects",
+  "sensitivity_scenarios": [
+    "primary",
+    "exclude_tips_above_p99_9",
+    "exclude_tip_rate_above_1",
+    "fare_only",
+    "distance_only",
+    "gamma_log_link",
+    "log_tip_rate_without_fare_predictor"
+  ],
+  "tail_rule": "Exclude tips strictly above the pooled 99.9th percentile",
+  "tip_rate_rule": "Exclude tips divided by fare greater than 1",
+  "temporal_rule": "Refit the primary model four times, omitting one calendar year per fit",
+  "core_effects": [
+    "fare increase of 10 percent",
+    "distance increase of one mile",
+    "one-calendar-year trend",
+    "Lyft versus Uber"
+  ],
+  "automatic_model_selection": false,
+  "causal_interpretation": false,
+  "random_seed": 20261125,
+  "local_pilot_maximum_rows": 120000,
+  "full_hpc_maximum_rows": null
+}
