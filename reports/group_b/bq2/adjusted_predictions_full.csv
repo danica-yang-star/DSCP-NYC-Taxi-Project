@@ -1,0 +1,8 @@
+family,level,reference,adjusted_mean_tip,ratio_to_reference
+platform,Uber,Uber,5.731481554266829,1.0
+platform,Lyft,Uber,6.498969744942566,1.1339074693705289
+borough,Manhattan,Manhattan,6.126564738366682,1.0
+borough,Bronx,Manhattan,5.493391544644024,0.896651186960042
+borough,Brooklyn,Manhattan,5.600862177676285,0.9141929314158284
+borough,Queens,Manhattan,5.865406086705343,0.9573727426683549
+borough,Staten Island,Manhattan,5.871951011821443,0.9584410289585681
