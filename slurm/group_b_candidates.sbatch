@@ -22,6 +22,14 @@ export MKL_NUM_THREADS="$SLURM_CPUS_PER_TASK"
 export NUMEXPR_NUM_THREADS="$SLURM_CPUS_PER_TASK"
 export MPLBACKEND=Agg
 
+MPLCONFIG_DIR=$(mktemp -d "/tmp/hvfhv-matplotlib-${SLURM_JOB_ID}-XXXXXX")
+export MPLCONFIGDIR="$MPLCONFIG_DIR"
+
+cleanup() {
+    rm -rf "$MPLCONFIG_DIR"
+}
+trap cleanup EXIT
+
 COMPARISON_OUTPUT=reports/group_b/b2/candidate_comparison_full.json
 CALIBRATION_OUTPUT=reports/group_b/b2/calibration_2025_full.csv
 FIGURE_DIR=reports/group_b/figures/full

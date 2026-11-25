@@ -1,0 +1,65 @@
+{
+  "calibration_output": "reports/group_b/b2/calibration_2025_full.csv",
+  "candidate_selection_status": "AWAITING_DIAGNOSTIC_REVIEW",
+  "collinearity": {
+    "log_fare_vs_log1p_miles_pearson": 0.8722766495102238,
+    "ols_design_condition_number": 111.19278195343213,
+    "two_predictor_vif": 4.181765510928982
+  },
+  "development_rows_available": 673048,
+  "development_rows_used": 673048,
+  "elapsed_seconds": 78.821,
+  "figures": [
+    "b2_tip_distribution.png",
+    "b2_monthly_median_tip.png",
+    "b2_validation_calibration.png"
+  ],
+  "formulas": {
+    "gamma_glm_log_link": "tips ~ log_fare + log1p_miles + C(pickup_hour, Treatment(reference=0)) + C(pickup_weekday, Treatment(reference=\"Monday\")) + C(borough_for_model, Treatment(reference=\"Manhattan\")) + C(platform, Treatment(reference=\"Uber\")) + year_centered + C(month, Treatment(reference=1)) + lyft_x_year + lyft_x_bronx + lyft_x_brooklyn + lyft_x_queens + lyft_x_staten_island",
+    "lognormal_ols_duan_smearing": "log_tips ~ log_fare + log1p_miles + C(pickup_hour, Treatment(reference=0)) + C(pickup_weekday, Treatment(reference=\"Monday\")) + C(borough_for_model, Treatment(reference=\"Manhattan\")) + C(platform, Treatment(reference=\"Uber\")) + year_centered + C(month, Treatment(reference=1)) + lyft_x_year + lyft_x_bronx + lyft_x_brooklyn + lyft_x_queens + lyft_x_staten_island"
+  },
+  "group_b_rows": 903434,
+  "maximum_development_rows": null,
+  "maximum_validation_rows": null,
+  "metric_leader_by_rmse_only": "lognormal_ols_duan_smearing",
+  "model_spec_id": "group_b_candidate_models_v1",
+  "model_spec_status": "FROZEN_BEFORE_CANDIDATE_FIT",
+  "models": {
+    "gamma_glm_log_link": {
+      "converged": true,
+      "iterations": 19,
+      "metrics_2025": {
+        "actual_mean": 6.325816282239372,
+        "mae": 2.0160367875391363,
+        "mean_error_actual_minus_predicted": 0.22884254618841154,
+        "median_absolute_error": 1.3822360284031137,
+        "predicted_mean": 6.096973736050961,
+        "rmse": 3.3427382493809885
+      },
+      "parameter_count": 54,
+      "pearson_chi2_per_residual_df": 0.26723799961103134
+    },
+    "lognormal_ols_duan_smearing": {
+      "log_residual_quantiles": {
+        "0.01": -1.2666069150918675,
+        "0.5": 0.05585588670610331,
+        "0.99": 1.0915977904941565
+      },
+      "metrics_2025": {
+        "actual_mean": 6.325816282239372,
+        "mae": 1.9792505814243757,
+        "mean_error_actual_minus_predicted": 0.0628956182701736,
+        "median_absolute_error": 1.3341716780332793,
+        "predicted_mean": 6.262920663969199,
+        "rmse": 3.217649160917418
+      },
+      "parameter_count": 54,
+      "smearing_factor": 1.1223749527994917
+    }
+  },
+  "run_mode": "FULL",
+  "sample_directory_name": "samples",
+  "status": "PASS",
+  "validation_rows_available": 230386,
+  "validation_rows_used": 230386
+}
