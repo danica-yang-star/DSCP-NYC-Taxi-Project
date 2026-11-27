@@ -1,0 +1,4 @@
+A group: 4635942
+Positive tips: 903434
+Zero tips: 3732508
+Positive tip rate: 0.19487603598146827
